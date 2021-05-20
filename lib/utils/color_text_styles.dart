@@ -8,7 +8,7 @@ const TextStyle kBodyText = TextStyle(
 
 const TextStyle kAppBarText = TextStyle(
     fontSize: 20,
-    color: kBlack,
+    color: kLightBlack,
     fontWeight: FontWeight.w600,
     fontStyle: FontStyle.normal);
 
