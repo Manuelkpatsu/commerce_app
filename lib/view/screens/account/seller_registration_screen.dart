@@ -1,4 +1,5 @@
 import 'package:commerceapp/utils/color_text_styles.dart';
+import 'package:commerceapp/view/screens/account/login_screen.dart';
 import 'package:commerceapp/view/widgets/input_decorator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -262,7 +263,13 @@ class _SellerRegistrationScreenState extends State<SellerRegistrationScreen> {
           TextSpan(
               text: ' Sign in',
               style: kBodyText.copyWith(color: kPrimaryAccent, fontSize: 14),
-              recognizer: TapGestureRecognizer()..onTap = () {})
+              recognizer: TapGestureRecognizer()..onTap = () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              }
+          )
         ]));
   }
 

@@ -1,4 +1,6 @@
 import 'package:commerceapp/utils/color_text_styles.dart';
+import 'package:commerceapp/view/screens/account/forgot_password_screen.dart';
+import 'package:commerceapp/view/screens/account/seller_registration_screen.dart';
 import 'package:commerceapp/view/widgets/input_decorator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -168,7 +170,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _forgotPassword() {
     return TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ForgotPasswordScreen()),
+          );
+        },
         child: Text('Forgot Password?',
             style: kBodyText.copyWith(color: kPrimaryAccent, fontSize: 14)));
   }
@@ -196,7 +203,13 @@ class _LoginScreenState extends State<LoginScreen> {
           TextSpan(
               text: ' Register',
               style: kBodyText.copyWith(color: kPrimaryAccent, fontSize: 14),
-              recognizer: TapGestureRecognizer()..onTap = () {})
+              recognizer: TapGestureRecognizer()..onTap = () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SellerRegistrationScreen()),
+                );
+              }
+          )
         ]));
   }
 

@@ -1,4 +1,6 @@
 import 'package:commerceapp/utils/color_text_styles.dart';
+import 'package:commerceapp/view/screens/account/login_screen.dart';
+import 'package:commerceapp/view/screens/account/seller_registration_screen.dart';
 import 'package:flutter/material.dart';
 
 class AccountScreen extends StatefulWidget {
@@ -11,9 +13,7 @@ class _AccountScreenState extends State<AccountScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('My Account', style: kAppBarText),
-          centerTitle: true
-        ),
+            title: Text('My Account', style: kAppBarText), centerTitle: true),
         body: _body());
   }
 
@@ -67,7 +67,12 @@ class _AccountScreenState extends State<AccountScreen> {
         color: kPrimaryAccent,
         elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => LoginScreen()),
+          );
+        },
         child: Text('Login',
             style: kBodyText.copyWith(
                 fontSize: 14, fontWeight: FontWeight.w500, color: kWhite)));
@@ -82,7 +87,12 @@ class _AccountScreenState extends State<AccountScreen> {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
             side: BorderSide(color: kPrimaryAccent)),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => SellerRegistrationScreen()),
+          );
+        },
         child: Text('Sign Up',
             style: kBodyText.copyWith(
                 fontSize: 14,
