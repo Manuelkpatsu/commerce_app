@@ -342,5 +342,9 @@ class _BuyerRegistrationScreenState extends State<BuyerRegistrationScreen> {
         ]));
   }
 
-  void _signUp() {}
+  void _signUp() {
+    if (_formKey.currentState.validate()) {
+      print('form submitted');
+    }
+  }
 }
