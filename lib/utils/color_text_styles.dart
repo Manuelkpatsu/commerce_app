@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
-const TextStyle kBodyText =
-    TextStyle(
-      fontSize: 16,
-      color: kBlack,
-      fontWeight: FontWeight.normal,
-      fontStyle: FontStyle.normal
-    );
+const TextStyle kBodyText = TextStyle(
+    fontSize: 16,
+    color: kBlack,
+    fontWeight: FontWeight.normal,
+    fontStyle: FontStyle.normal);
+
+const TextStyle kAppBarText = TextStyle(
+    fontSize: 20,
+    color: kLightBlack,
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal);
 
 const kWhite = Colors.white;
 const kBlack = Color(0xFF000000);
